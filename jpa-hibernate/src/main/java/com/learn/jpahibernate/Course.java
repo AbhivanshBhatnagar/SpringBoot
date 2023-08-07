@@ -1,6 +1,11 @@
-package com.learn.jpahibernate.jdbc;
+package com.learn.jpahibernate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+    @Id
     int id;
     String name;
     String author;
