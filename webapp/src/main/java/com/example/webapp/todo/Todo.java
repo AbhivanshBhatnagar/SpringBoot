@@ -2,9 +2,12 @@ package com.example.webapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.validation.constraints.Size;
+
 public class Todo {
     private int id;
     private String name;
+    @Size(min = 10, message = "Enter at least 10 Characters...")
     private String description;
     private LocalDate targetDate;
     private boolean completed;

@@ -30,6 +30,7 @@
           placeholder="description"
           required="required"
         />
+        <form:errors path="description" cssClass="text-warning" />
         <input type="submit" class="btn btn-success" />
       </form:form>
     </div>

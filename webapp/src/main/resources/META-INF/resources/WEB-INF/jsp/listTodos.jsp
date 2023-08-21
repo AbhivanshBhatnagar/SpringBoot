@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
   <head>
     <title>WELCOME PAGE</title>
@@ -20,6 +20,8 @@
             <!-- <th>Name</th> -->
             <th>Target Date</th>
             <th>Is completed</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -30,6 +32,16 @@
               <!-- <td>${todo.name}</td> -->
               <td>${todo.targetDate}</td>
               <td>${todo.completed}</td>
+              <td>
+                <a href="delete-todo?id=${todo.id}" class="btn btn-warning"
+                  >Delete</a
+                >
+              </td>
+              <td>
+                <a href="update-todo?id=${todo.id}" class="btn btn-success"
+                  >Update</a
+                >
+              </td>
             </tr>
           </c:forEach>
         </tbody>
