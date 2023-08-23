@@ -7,6 +7,7 @@
     />
   </head>
   <body>
+    <%@ include file="common/nav.jspf"%>
     <div class="container">
       <h2>Welcome to Welcome Page</h2>
       <div>Your name is ${username}</div>
