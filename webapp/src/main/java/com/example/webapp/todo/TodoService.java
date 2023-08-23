@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import jakarta.validation.Valid;
@@ -17,10 +19,13 @@ public class TodoService {
         todos.add(new Todo(++todoCount, "abhivansh", "Learn Spring MVC", LocalDate.now().plusDays(10), false));
         todos.add(new Todo(++todoCount, "abhivansh", "Learn Spring Security", LocalDate.now().plusDays(15), false));
         todos.add(new Todo(++todoCount, "abhivansh", "Learn DevOps", LocalDate.now().plusDays(20), false));
+
     }
 
     public static List<Todo> retrieveTodos(String user) {
-        return todos;
+
+        Predicate<? super Todo> predicate = todo -> todo.getName().equalsIgnoreCase(user);
+        return todos.stream().filter(predicate).toList();
     }
 
     public void addTodo(String user, String desc, LocalDate targetDate, boolean isDone) {
@@ -45,4 +50,5 @@ public class TodoService {
         deleteById(todo.getId());
         todos.add(todo);
     }
+
 }
