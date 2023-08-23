@@ -12,25 +12,50 @@
       <h1>Enter Todo Details</h1>
       <form:form method="post" modelAttribute="todo">
         Description:
-        <form:input
-          type="text"
-          path="description"
-          placeholder="description"
-          required="required"
-        />
-        <form:input
-          type="hidden"
-          path="completed"
-          placeholder="description"
-          required="required"
-        />
-        <form:input
-          type="hidden"
-          path="id"
-          placeholder="description"
-          required="required"
-        />
-        <form:errors path="description" cssClass="text-warning" />
+        <fieldset class="mb-3">
+          <form:input
+            type="text"
+            path="description"
+            placeholder="description"
+            required="required"
+          />
+          <form:label path="description">Description</form:label>
+          <form:input
+            type="hidden"
+            path="completed"
+            placeholder="description"
+            required="required"
+          />
+          <form:input
+            type="hidden"
+            path="id"
+            placeholder="description"
+            required="required"
+          />
+          <form:errors path="description" cssClass="text-warning" />
+        </fieldset>
+        <fieldset class="mb-3">
+          <form:input
+            type="text"
+            path="targetDate"
+            placeholder="targetDate"
+            required="required"
+          />
+          <form:label path="targetDate">Target Date</form:label>
+          <form:input
+            type="hidden"
+            path="completed"
+            placeholder="description"
+            required="required"
+          />
+          <form:input
+            type="hidden"
+            path="id"
+            placeholder="description"
+            required="required"
+          />
+          <form:errors path="targetDate" cssClass="text-warning" />
+        </fieldset>
         <input type="submit" class="btn btn-success" />
       </form:form>
     </div>
