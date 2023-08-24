@@ -22,7 +22,7 @@ public class TodoService {
 
     }
 
-    public static List<Todo> retrieveTodos(String user) {
+    public static List<Todo> findByUsername(String user) {
 
         Predicate<? super Todo> predicate = todo -> todo.getName().equalsIgnoreCase(user);
         return todos.stream().filter(predicate).toList();

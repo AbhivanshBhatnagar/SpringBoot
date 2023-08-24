@@ -10,13 +10,13 @@
   <body>
     <%@ include file="common/nav.jspf"%>
     <div class="container">
-      <h2>Welcome to Welcome Page</h2>
+      <h2>Manage your Todos</h2>
       <!-- <div>Your todos are ${todos}</div> -->
 
       <table class="table">
         <thead>
           <tr>
-            <th>ID</th>
+            <!-- <th>ID</th> -->
             <th>Description</th>
             <!-- <th>Name</th> -->
             <th>Target Date</th>
@@ -28,7 +28,7 @@
         <tbody>
           <c:forEach items="${todos}" var="todo">
             <tr>
-              <td>${todo.id}</td>
+              <!-- <td>${todo.id}</td> -->
               <td>${todo.description}</td>
               <!-- <td>${todo.name}</td> -->
               <td>${todo.targetDate}</td>

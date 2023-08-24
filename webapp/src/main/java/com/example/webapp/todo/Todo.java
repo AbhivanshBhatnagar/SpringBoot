@@ -2,15 +2,22 @@ package com.example.webapp.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
+@Entity
 public class Todo {
+    @Id
     private int id;
     private String name;
     @Size(min = 10, message = "Enter at least 10 Characters...")
     private String description;
     private LocalDate targetDate;
     private boolean completed;
+
+    public Todo() {
+    }
 
     public Todo(int id, String name, String description, LocalDate targetDate, boolean completed) {
         this.id = id;
@@ -65,5 +72,5 @@ public class Todo {
     public void setCompleted(boolean completed) {
         this.completed = completed;
     }
-    
+
 }
