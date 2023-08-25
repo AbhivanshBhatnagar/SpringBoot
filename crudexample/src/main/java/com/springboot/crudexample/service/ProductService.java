@@ -17,7 +17,7 @@ public class ProductService {
         return repository.save(product);
     }
 
-    public List<Product> saveProducts(List<Product> products) {
+    public List<Product> saveProductcouldn'tcouldn'ts(List<Product> products) {
         return repository.saveAll(products);
     }
 
